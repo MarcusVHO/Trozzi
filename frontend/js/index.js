@@ -1,6 +1,6 @@
 
 //Conecxão do servidor
-const socket = new WebSocket("https://e38a-200-146-204-205.ngrok-free.app")
+const socket = new WebSocket(SERVER_URL)
 
 //Captura de elementos do formulário
 const login = document.querySelector(".login")
