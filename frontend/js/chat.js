@@ -30,7 +30,7 @@ user.color = getRandomColor()
 
 //Conecção com o servidor
 let websocket
-websocket = new WebSocket(SERVER_URL)
+websocket = new WebSocket("https://e38a-200-146-204-205.ngrok-free.app")
 
 //Criação de mensagens ods others
 const createMessageOtherElement = (content, sender, senderColor) => {
