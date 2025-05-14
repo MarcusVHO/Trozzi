@@ -24,6 +24,8 @@ const verifyLogin = (name, password) => {
         const userlocated = data.find((res) => res.NOME == name && res.SENHA == password)
         if (userlocated){
             console.log("Usuario encontrado: ", userlocated)
+            userlocated.typie = "login" //adiciona o tipo da string para que não seja confundida
+            userlocated.password = undefined //remove a senha do objeto 
             return userlocated
         }
         

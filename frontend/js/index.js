@@ -51,7 +51,8 @@ socket.onmessage = (event) => {
         password.style.outline = "red solid 1.5px"
         textCheck1.style.display = "flex"
         textCheck2.style.display = "flex"
-    } else {
+    } else if(response.type == "login"){
+        console.log("Login realizado com sucesso")
         localStorage.setItem("userData", JSON.stringify(response))
         window.location.href = "chat.html"
         textCheck1.style.display = "none"
