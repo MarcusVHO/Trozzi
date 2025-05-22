@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/Iconesemtexto.png" type="image/png">
+    <link rel="stylesheet" href="../css/subscribe.css">
+    <title>Trozzi</title>
+</head>
+<body>
+
+    <section class="conteiner">
+
+        <div class="title">
+            <img src="../image/Iconesemtexto.png" alt="icone">
+            <p>Trozzi</p>
+        </div>
+
+
+        <section class="subscribe_conteiner">
+
+            <div class="spaceship">
+                <img src="../image/alien-spaceship-animate.svg" alt="spaceship">
+            </div>
+
+            <div class="subscribe">
+                <form class="subscribe_form">
+
+                    <label for="subscribe_username">Nome de Usuário</label>
+                    <input type="username" placeholder="Nome de Usuário" autocomplete="username" class="subscribe_username" required>
+                    
+                    <label for="subscribe_email">E-mail</label>
+                    <input type="email" placeholder="E-mail" autocomplete="email" class="subscribe_email">
+                    
+                    <label for="subscribe_password">Senha</label>
+                    <input type="password" placeholder="Senha" autocomplete="new-password" class="subscribe_password" required>
+
+                    <label for="confirm_password">Confirmar Senha</label>
+                    <input type="password" placeholder="Senha" autocomplete="new-password" class="confirm_password" required>
+                    
+                    <div class="subscribe_terms">
+                        <input type="checkbox" id="terms" class="terms">
+                        <label for="terms">Aceito os termos de uso</label>
+                    </div>
+
+
+                    <button class="subscribe_button">Criar Conta</button>
+                    <button onclick="window.location.href='../view/index.html'" class="login">Entrar</button>
+
+                </form>
+            </div>
+
+        </section>
+
+    </section>
+
+</body>
+</html>

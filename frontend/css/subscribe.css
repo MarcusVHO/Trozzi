@@ -1,0 +1,160 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 16px;
+}
+
+.conteiner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #1b1c2d;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.spaceship{
+    width: 60vh;
+}
+
+@media (max-width: 768px) {
+    .spaceship {
+        width: 35vh;
+        max-width: 200px;
+    }
+    .subscribe_conteiner{
+        width: 50vh;
+        max-width: 350px;
+        margin-top: 20vh;
+    }
+    
+}
+
+.subscribe_conteiner{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #1b1c2d;
+    box-shadow: 10px 10px 10px 10px #0000004d  ;
+    transition: box-shadow 0.4s;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 5vh;
+}
+
+.subscribe_conteiner:hover{
+    box-shadow: 0 15px 30px rgb(0, 0, 0);
+
+}
+
+.subscribe_form {
+    padding: 18px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 700;
+
+}
+
+.subscribe_form input {
+    background-color: #28292e;
+    font-weight: 700;
+    border: none;
+    width: 40vh;
+    max-width: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #e7e7e7;
+    outline: none;
+    font-size: 0.85rem;
+}
+.subscribe_form input:focus {
+    outline: 2px solid #2597d7;
+}
+
+
+.subscribe_terms .terms {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.subscribe_terms .terms:checked {
+    background-color: #27b9f2;
+    border-color: #27b9f2;
+}
+
+.subscribe_terms .terms:checked::before {
+    content: "✔";
+    color: black;
+    font-size: 14px;
+}
+
+.subscribe_terms label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.subscribe_terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.subscribe_terms .terms {
+    width: 20px;
+    height: 20px;
+    accent-color: #27b9f2; 
+}
+
+.subscribe_terms label {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.subscribe_form button {
+    background: linear-gradient(to right, #336bf2, #35dd7c );
+    background-size: 200% auto;
+    background-position: left center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #e7e7e7;
+    cursor: pointer;
+}
+
+.subscribe_form button:hover {
+    background-position: right center;
+
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    
+}
+.title > img {
+    width: 10vh;
+    border-radius: 10px;
+}
