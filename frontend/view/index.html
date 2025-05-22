@@ -15,17 +15,29 @@
             <H1>Trozzi</H1>
         </div>
 
-        <div class="login">
-            <form class="login_form">
-                <h2>Login</h2>
-                <p class="login_check1">Usuário não econtrado</p>
-                <input type="text" class="login_input" placeholder="Usuário" required>
-                <p class="login_check2">Senha incorreta</p>
-                <input type="password" class="password_input" placeholder="Senha" required>
-                <button type="submit" class="login_button">Login</button>
-                <button onclick="window.location.href='signin.html'">Inscreva-se</button>
-                
-            </form>
+        <div class="login_conteiner">
+            <div class="astronaut">
+                <img src="../image/astronaut-animate.svg" alt="Astronauta">
+            </div>
+            <div class="login">
+                <form class="login_form">
+                    <h2>Boas-vindas de volta!</h2>
+                    <p>Estamos muito animados em te ver novamente!</p>
+
+                    <label class="login_check1">E-MAIL OU USUÁRIO </label>
+                    <input type="text" class="login_input" placeholder="Usuário" required>
+                    
+                    
+                    <label class="login_check2">SENHA</label>
+                    <input type="password" class="password_input" placeholder="Senha" required>
+                    <a href="forgot-password.html" class="forgot_password">Esqueceu sua senha?</a>
+
+
+                    <button type="submit" class="login_button">Login</button>
+                    <button onclick="window.location.href='signin.html'">Inscreva-se</button>
+                    
+                </form>
+            </div>
         </div>
 
     </section>

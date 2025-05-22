@@ -13,7 +13,7 @@
 .conteiner {
     display: flex;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     color: white;
@@ -29,6 +29,7 @@
     position:absolute;
     top: 10px;
     left: 10px;
+    
 }
 .title > img {
     width: 10vh;
@@ -39,15 +40,21 @@
 
 
 
-.login{
-    background-color: rgb(51, 52, 54);
+.login{ 
     padding: 18px;
     border-radius: 5px;
 }
 
 .login_form > h2 {
-    margin-bottom: 10px;
+    font-weight: 700;
+    align-self: center;
 }
+.login_form > p {
+    font-weight: 500;
+    align-self: center;
+}
+
+
 
 
 .login_form{
@@ -56,13 +63,15 @@
     gap: 5px;
     
 }
+
 .login_form input {
-    background-color: rgb(255, 255, 255);
+    background-color: #28292e;
     font-weight: 700;
     border: none;
+    width: 40vh;
     padding: 10px;
     border-radius: 5px;
-    color: rgb(0, 0, 0);
+    color: #e7e7e7;
     outline: none;
 }
 .login_form input:focus {
@@ -77,13 +86,13 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #e7e7e7;
     cursor: pointer;
     
 
 }
 .login_button{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .login_form button:hover{
     background-position: right center;
@@ -91,12 +100,73 @@
 
 .login_check1{
     font-size: 0.90rem;
-    color: rgb(228, 55, 55);
-    display: none;
+    font-weight: 600;
+    color: #e7e7e7;
+    margin-top: 20px;
     
 }
 .login_check2{
     font-size: 0.90rem;
-    color: rgb(228, 55, 55);
-    display: none;
+    font-weight: 600;
+    color: #e7e7e7;
+    margin-top: 10px;
+
+}
+
+.astronaut{
+    width: 60vh;
+}
+
+.login_conteiner{
+    display: flex;
+    margin-top: 40px;
+    box-shadow: 10px 10px 10px 10px #00000027  ;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5vh;
+    
+}
+
+.forgot_password{
+    text-decoration: none;
+    color:#3587F2 ;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+.forgot_password:hover{
+    text-decoration:underline;
+}
+
+@media (max-width: 768px) {
+    .login_conteiner {
+        flex-direction: column;
+        gap: 20px;
+        padding: 4vh;
+    }
+
+    .astronaut {
+        max-width: 35vh;
+    }
+
+    .login {
+        width: 100%;
+    }
+
+    .login_form input,
+    .login_form button {
+        width: 100%;
+    }
+}
+
+.login_conteiner {
+    transition: box-shadow 0.4s;
+}
+
+.login_conteiner:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.548);
+}
+
+button {
+    min-width: 150px;
+    min-height: 45px;
 }

@@ -60,7 +60,7 @@ wss.on("connection", function conection(ws) {
                 const confirm = verifyLogin(received.username, received.password)
 
                 if(confirm){
-                    confirm.typie = "login" //adiciona o tipo da string para que não seja confundida
+                    confirm.type = "login" //adiciona o tipo da string para que não seja confundida
                     ws.send(JSON.stringify(confirm))
                     
                     

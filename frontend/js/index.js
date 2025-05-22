@@ -49,14 +49,14 @@ socket.onmessage = (event) => {
         console.log("Não estou encontrando o usuário")
         loginInput.style.outline = "red solid 1.5px"
         password.style.outline = "red solid 1.5px"
-        textCheck1.style.display = "flex"
-        textCheck2.style.display = "flex"
+        textCheck1.style.color = "#ed7673"
+        textCheck2.style.color = "#ed7673"
     } else if(response.type == "login"){
         console.log("Login realizado com sucesso")
         localStorage.setItem("userData", JSON.stringify(response))
         window.location.href = "chat.html"
-        textCheck1.style.display = "none"
-        textCheck2.style.display = "none"
+        textCheck1.style.color = "#ed7673"
+        textCheck2.style.color = "#ed7673"
     }
 }
 
