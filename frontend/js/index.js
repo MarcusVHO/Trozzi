@@ -9,8 +9,7 @@ const loginInput = login.querySelector(".login_input")
 const password = login.querySelector(".password_input")
 
 //Captura de elementos de feedback de login
-const textCheck1 = document.querySelector(".login_check1")
-const textCheck2 = document.querySelector(".login_check2")
+const usernameOurPassword = document.querySelector(".username_our_passowrd")
 
 
 
@@ -45,22 +44,29 @@ socket.onmessage = (event) => {
     console.log(response) //Trabalha a resposta do servidor.
 
 
-    if(response == "N/A"){
+    if(response == "N/A"){ //caso não ache o usuario
         console.log("Não estou encontrando o usuário")
         loginInput.style.outline = "red solid 1.5px"
         password.style.outline = "red solid 1.5px"
-        textCheck1.style.color = "#ed7673"
-        textCheck2.style.color = "#ed7673"
-    } else if(response.type == "login"){
+        usernameOurPassword.style.display = "inline"
+        password.value = null
+    } else if(response.type == "login"){ //quando loga
         console.log("Login realizado com sucesso")
         localStorage.setItem("userData", JSON.stringify(response))
         window.location.href = "chat.html"
-        textCheck1.style.color = "#ed7673"
-        textCheck2.style.color = "#ed7673"
     }
 }
 
 
+loginInput.addEventListener("input", () =>{
+    loginInput.style.outline = "none"
+    password.style.outline = "none"
+})
+
+password.addEventListener("focus", () => {
+    login.style.outline = "none"
+    password.style.outline = "none"
+})
 
 //aciona ao enviar formulário
 loginForm.addEventListener("submit", enviar)

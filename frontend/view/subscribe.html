@@ -24,15 +24,16 @@
             </div>
 
             <div class="subscribe">
+                <h2>É muito bom ter você aqui!</h2>
                 <form class="subscribe_form">
 
-                    <label for="subscribe_username">Nome de Usuário</label>
-                    <input type="username" placeholder="Nome de Usuário" autocomplete="username" class="subscribe_username" required>
+                    <label for="subscribe_username">Nome de Usuário <span class="username_used"> - Esse usuário já está em uso!!</span></label>
+                    <input type="username" placeholder="Nome de Usuário" class="subscribe_username" required>
                     
-                    <label for="subscribe_email">E-mail</label>
+                    <label for="subscribe_email">E-mail<span class="email_used"> - Esse email já está em uso!!</span></label>
                     <input type="email" placeholder="E-mail" autocomplete="email" class="subscribe_email">
                     
-                    <label for="subscribe_password">Senha</label>
+                    <label for="subscribe_password">Senha<span class="password_no_match"> - Senhas devem coincidir!!</span></label>
                     <input type="password" placeholder="Senha" autocomplete="new-password" class="subscribe_password" required>
 
                     <label for="confirm_password">Confirmar Senha</label>
@@ -44,7 +45,7 @@
                     </div>
 
 
-                    <button class="subscribe_button">Criar Conta</button>
+                    <button type="submit" class="subscribe_button">Criar Conta</button>
                     <button onclick="window.location.href='../view/index.html'" class="login">Entrar</button>
 
                 </form>
@@ -53,6 +54,9 @@
         </section>
 
     </section>
+
+<script src="../js/config.js"></script>
+<script src="../js/subscribe.js"></script>
 
 </body>
 </html>

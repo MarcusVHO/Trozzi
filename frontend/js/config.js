@@ -1,1 +1,1 @@
-const SERVER_URL = "http://localhost:8080"
+const SERVER_URL = "https://80a3-200-24-90-68.ngrok-free.app"

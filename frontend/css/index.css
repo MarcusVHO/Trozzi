@@ -33,7 +33,6 @@
 }
 .title > img {
     width: 10vh;
-    border-radius: 10px;
 }
 
 
@@ -98,20 +97,14 @@
     background-position: right center;
 }
 
-.login_check1{
+label{
     font-size: 0.90rem;
     font-weight: 600;
     color: #e7e7e7;
     margin-top: 20px;
     
 }
-.login_check2{
-    font-size: 0.90rem;
-    font-weight: 600;
-    color: #e7e7e7;
-    margin-top: 10px;
 
-}
 
 .astronaut{
     width: 60vh;
@@ -169,4 +162,9 @@
 button {
     min-width: 150px;
     min-height: 45px;
+}
+.username_our_passowrd {
+    color: #ed7673;
+    display: none;
+    font-size: 0.85rem;
 }
