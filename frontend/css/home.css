@@ -25,7 +25,7 @@
     height: 100dvh;
     width: 40vh;
     color: white;
-    box-shadow: 3px 0 3px 0px #000000;
+    box-shadow: 3px 2px 20px #000000;
 
 }
 
@@ -33,20 +33,22 @@
 
 /*Trabalho do Profile*/
 .profile {
-    padding: 10px;
+    height: 8vh;
+    padding: 1px;
     margin-bottom: 10px;
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 0.80rem;
     display: flex;
     align-items: center;
+    box-shadow: 0px 0px 20px #00000091;
 }
 .profile_image {
     background-color: white;
-    width: 7vh;
-    height: 7vh;
+    width: 5vh;
+    height: 5vh;
     border-radius: 100%; /*Remover depois*/
     padding: 10px; /*Remover depois*/
-    margin: 5px 10px 5px 1px;
+    margin: 5px 10px 5px 10px;
 
 }
 .menu_icon {
@@ -83,7 +85,6 @@
 /*Trabalho das conversas*/
 
 .conversations ul li {
-    background-color: transparent;
     padding: 15px;
     margin: 9px;
     display: flex;
@@ -106,7 +107,19 @@
     background-color: white;
     border: none;
 }
+.conversations ul li:active{
+    box-shadow: 3px 6px 20px #000000;
+    transform: translateY(3px);
 
+}
+
+/*Apenas global chat*/
+.global_chat_button{
+    background-color: #23283bb2;
+    box-shadow: 3px 6px 20px #0000009c;
+    transform: translateY(3px);
+
+}
 
 
 
@@ -123,20 +136,44 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+/*Cabeçalho do chat*/
 .chat_header {
     background-color: #171A26;
     width: 100%;
     height: 8vh;
     display: flex;
     align-items: center;
-}
+    box-shadow: 0 5px 10px #00000056;
 
-/*Cabeçalho do chat*/
+
+}
+.chat_header_seta_return_button{
+    width: 5vh;
+    height: 5vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    margin-left: 6px;
+}
+.chat_header_seta_return_button:hover{
+    background-color: #ecedf033;
+
+}
+.chat_header_mobile_seta_return_icon{
+    filter: invert(100%);
+    width: 3vh;
+    height: 3vh;
+}
 .chat_header_contat_img {
+    background-color: white ;
     width: 6vh;
     height: 6vh;
     border-radius: 100%;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-right: 20px;
 }
 .chat_header_telefone_img {
@@ -187,7 +224,7 @@
     border-radius: 0px 10px 10px 10px ;
     margin-bottom: 20px;
 }
-.message_other >h2 {
+.name_other{
     color: orange;
     margin-bottom: 10px;
 }
@@ -244,4 +281,59 @@
 
 .spacer {
     flex-grow: 1;
+}
+:root {
+  --vh: 1vh;
+}
+
+@media (max-width: 768px) {
+    :root {
+    --vh: calc(100dvh / 100);
+    }
+    .sidebar {
+    display: none;
+    }
+    /* Quando sidebar estiver ativa no mobile */
+    .sidebar.show {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        flex-direction: column;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    }
+
+    /*Chat configuration from telefone*/
+    .chat_header_seta_return_button{
+        display: flex;
+    }
+    .chat_header_contat_img {
+        margin-left: 5px;
+
+    }
+    .chat_header_contat_name {
+        font-size: 1.0rem;
+    }
+    .chat_header_telefone_img {
+        width: 6vh;
+        height: 6vh;
+        margin-right: 3px;
+    }
+    .chat_header_cam_img {
+        width: 6vh;
+        height: 6vh;
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+
+}
+
+.conteiner,
+.sidebar,
+.chat {
+  height: calc(var(--vh) * 100);
 }

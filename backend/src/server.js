@@ -24,8 +24,8 @@ const verifyLogin = (name, password) => {
         const userlocated = data.find((res) => res.NOME == name && res.SENHA == password)
         if (userlocated){
             console.log("Usuario encontrado")
-            userlocated.typie = "login" //adiciona o tipo da string para que não seja confundida
-            userlocated.password = undefined //remove a senha do objeto 
+            userlocated.type = "login" //adiciona o tipo da string para que não seja confundida
+            userlocated.SENHA = undefined //remove a senha do objeto 
             return userlocated
         }
         
@@ -66,7 +66,8 @@ const subscribe = (username, email, password) => {
     file.Sheets[mainSheet] = newSheet
     reader.writeFile(file, filePath)
     console.log("Usuário cadastrado com sucesso")
-    return "Usuário cadastrado com sucesso"
+    const rest = verifyLogin(username, password)
+    return rest
 }
 
 

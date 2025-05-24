@@ -53,7 +53,7 @@ socket.onmessage = (event) => {
     } else if(response.type == "login"){ //quando loga
         console.log("Login realizado com sucesso")
         localStorage.setItem("userData", JSON.stringify(response))
-        window.location.href = "chat.html"
+        window.location.href = "home.html"
     }
 }
 

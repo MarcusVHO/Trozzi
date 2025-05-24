@@ -64,6 +64,10 @@ socket.onmessage = (event) => {
             emailUsed.style.display = "inline"
             subscribeEmail.style.outline = "red solid 1.5px"
         }
+        case response: {
+            localStorage.setItem("userData", JSON.stringify(response))
+            window.location.href = "home.html"
+        }
     }
 
 }
