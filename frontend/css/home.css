@@ -145,6 +145,7 @@
     display: flex;
     align-items: center;
     box-shadow: 0 5px 10px #00000056;
+    margin-bottom: 10px;
 
 
 }
@@ -246,6 +247,8 @@
     height: 8vh;
     padding: 10px;
     background-color: #171A26;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 .chat_input button {
@@ -336,4 +339,31 @@
 .sidebar,
 .chat {
   height: calc(var(--vh) * 100);
+}
+
+
+
+
+
+/* Barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* largura da barra */
+}
+
+/* Fundo da barra */
+::-webkit-scrollbar-track {
+  background: #171A26;
+  border-radius: 10px;
+}
+
+/* "Polegar" da barra (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+  background-color: #2f364e;
+  border-radius: 10px;
+  border: 3px solid #171A26; /* Espaço ao redor do polegar */
+}
+
+/* Quando passar o mouse em cima do polegar */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
